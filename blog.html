@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Talha Majid — Cybersecurity &amp; Dev Insights</title>
+  <meta name="description" content="Insights on cybersecurity, AI, DevOps, and the hacker mindset by Talha Majid.">
+  <link rel="icon" type="image/png" href="Assets/favicon-32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="navbar">
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Blog Hero -->
+<div class="blog-hero">
+  <div class="section-badge"><i class="fas fa-pen-nib"></i> Insights</div>
+  <h1>The <span class="highlight">Blog</span></h1>
+  <p>Thoughts on cybersecurity, hacking, AI, and the development world.</p>
+</div>
+
+<section style="padding-top:0">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="blog-filters">
+      <button class="active" data-category="all">All Posts</button>
+      <button data-category="cyber">Cybersecurity</button>
+      <button data-category="ai">AI</button>
+      <button data-category="devops">DevOps</button>
+    </div>
+
+    <!-- Featured Post -->
+    <a href="blog/how-hackers-think.html" class="featured-post" data-category="cyber">
+      <div class="fp-img"><img src="blog/images/hackers-think.png" alt="How Hackers Think"></div>
+      <div class="fp-body">
+        <div class="fp-badge">Featured • Cybersecurity</div>
+        <h2>How Hackers Actually Think</h2>
+        <p>It's not about the hoodie. It's about the mindset. Hackers see systems the way architects see buildings — they don't see the pretty facade, they see structural weaknesses. Here's what really drives a hacker's approach.</p>
+        <div class="fp-meta">April 2026 · 5 min read</div>
+      </div>
+    </a>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+      <a href="blog/password-already-broken.html" class="blog-card" data-category="cyber">
+        <div class="bc-img"><img src="blog/images/password-broken.png" alt="Password Security"></div>
+        <div class="bc-body">
+          <div class="bc-cat">Cybersecurity</div>
+          <h3>Your Password is Already Broken</h3>
+          <p class="bc-desc">Think your password is safe? With 10 billion leaked credentials, the math isn't in your favor.</p>
+          <div class="bc-date">April 2026 · 5 min read</div>
+        </div>
+      </a>
+      <a href="blog/dev-to-cybersecurity.html" class="blog-card" data-category="cyber">
+        <div class="bc-img"><img src="blog/images/dev-to-cyber.png" alt="Dev to Cyber"></div>
+        <div class="bc-body">
+          <div class="bc-cat">Cybersecurity</div>
+          <h3>From Web Developer to Cybersecurity</h3>
+          <p class="bc-desc">My personal journey from writing frontend code to hunting vulnerabilities and building security tools.</p>
+          <div class="bc-date">March 2026 · 6 min read</div>
+        </div>
+      </a>
+      <a href="blog/beginner-hacker-tools.html" class="blog-card" data-category="cyber">
+        <div class="bc-img"><img src="blog/images/hacker-tools.png" alt="Hacker Tools"></div>
+        <div class="bc-body">
+          <div class="bc-cat">Cybersecurity</div>
+          <h3>Top Tools Every Beginner Hacker Needs</h3>
+          <p class="bc-desc">Your starter kit for ethical hacking — no fluff, just the tools that actually matter.</p>
+          <div class="bc-date">March 2026 · 5 min read</div>
+        </div>
+      </a>
+      <a href="blog/ai-in-cybersecurity.html" class="blog-card" data-category="ai">
+        <div class="bc-img"><img src="blog/images/ai-cybersecurity.png" alt="AI Security"></div>
+        <div class="bc-body">
+          <div class="bc-cat">AI</div>
+          <h3>AI in Cybersecurity: Threat or Opportunity?</h3>
+          <p class="bc-desc">AI is reshaping security. But is it making us safer — or giving attackers a superpower?</p>
+          <div class="bc-date">February 2026 · 5 min read</div>
+        </div>
+      </a>
+      <a href="blog/devsecops-simplified.html" class="blog-card" data-category="devops">
+        <div class="bc-img"><img src="blog/images/devsecops.png" alt="DevSecOps"></div>
+        <div class="bc-body">
+          <div class="bc-cat">DevOps</div>
+          <h3>DevSecOps Simplified</h3>
+          <p class="bc-desc">Security shouldn't be an afterthought. Here's how to bake it into every stage of your pipeline.</p>
+          <div class="bc-date">February 2026 · 5 min read</div>
+        </div>
+      </a>
+      <a href="blog/how-websites-get-hacked.html" class="blog-card" data-category="cyber">
+        <div class="bc-img"><img src="blog/images/websites-hacked.png" alt="Websites Hacked"></div>
+        <div class="bc-body">
+          <div class="bc-cat">Cybersecurity</div>
+          <h3>How Websites Get Hacked (Real Cases)</h3>
+          <p class="bc-desc">Real-world breaches, real lessons. The attacks that caught companies off guard.</p>
+          <div class="bc-date">January 2026 · 6 min read</div>
+        </div>
+      </a>
+      <a href="blog/why-devs-ignore-security.html" class="blog-card" data-category="devops">
+        <div class="bc-img"><img src="blog/images/devs-ignore-security.png" alt="Dev Security"></div>
+        <div class="bc-body">
+          <div class="bc-cat">DevOps</div>
+          <h3>Why Developers Ignore Security</h3>
+          <p class="bc-desc">It's not laziness. It's a system problem. And it's costing companies millions.</p>
+          <div class="bc-date">January 2026 · 6 min read</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Rana Muhammad Talha Majid</div>
+    <div class="footer-socials">
+      <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ranatalhamajid1" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:ranatalhamajid@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

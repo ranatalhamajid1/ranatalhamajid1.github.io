@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSecOps Simplified | Talha Majid Blog</title>
+  <meta name="description" content="DevSecOps doesn't have to be complicated. Here's how to bake security into your pipeline.">
+  <link rel="icon" href="../Assets/favicon-32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+<nav class="navbar scrolled"><div class="nav-container"><a href="../index.html" class="nav-logo"><img src="../Assets/tm-logo.png" alt="TM"><span>TALHA.SEC</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../blog.html">Blog</a></div></div></nav>
+<div class="blog-full" style="padding-top:6rem">
+  <a href="../blog.html" class="blog-back"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  <img src="images/devsecops.png" alt="DevSecOps">
+  <div class="blog-meta"><span class="blog-category">DevOps</span><span class="blog-date">February 2026</span></div>
+  <h1>DevSecOps Simplified</h1>
+  <div class="blog-body">
+    <p>Here's a scenario that plays out at companies every single day: The development team ships a feature on Friday. Monday morning, the security team finds three critical vulnerabilities. The release gets rolled back. Developers are frustrated. Security is frustrated. Management is furious.</p>
+    <p>DevSecOps exists to kill this cycle. And it's simpler than you think.</p>
+
+    <h2>What DevSecOps Actually Means</h2>
+    <p>Strip away the buzzwords: DevSecOps means <strong>security is everyone's job, at every stage.</strong> Not just the security team's problem at the end. Not just a checkbox before deployment. It's security baked into planning, coding, testing, deploying, and monitoring.</p>
+    <p>Think of it like building a house. Traditional security is hiring a guard after construction. DevSecOps is building the locks, alarms, and reinforced doors during construction.</p>
+
+    <h2>The Three Pillars</h2>
+    <p><strong>1. Shift Left.</strong> Move security testing earlier in the development process. Don't wait for QA to find vulnerabilities. Use pre-commit hooks, IDE plugins, and automated scanning in your CI pipeline. Catch issues when they're cheap to fix — not in production when they cost millions.</p>
+    <p><strong>2. Automate Everything.</strong> Manual security reviews don't scale. Use SAST (Static Application Security Testing) tools to scan code for vulnerabilities automatically. Use DAST (Dynamic Application Security Testing) for running applications. Use SCA (Software Composition Analysis) for your dependencies.</p>
+    <p><strong>3. Continuous Monitoring.</strong> Security doesn't end at deployment. Monitor for anomalies in production. Set up alerts for unusual access patterns. Log everything. If a breach happens, your monitoring setup determines whether you detect it in minutes or months.</p>
+
+    <h2>Tools That Make It Real</h2>
+    <p><strong>SonarQube</strong> for code quality and security scanning. <strong>Snyk</strong> for dependency vulnerabilities. <strong>Trivy</strong> for container scanning. <strong>GitHub Actions</strong> or <strong>GitLab CI</strong> for pipeline automation. <strong>OWASP ZAP</strong> for dynamic testing.</p>
+    <p>You don't need all of them on day one. Start with one. Add more as your pipeline matures.</p>
+
+    <h2>The Cultural Shift</h2>
+    <p>The hardest part of DevSecOps isn't the tools — it's the culture. Developers need to care about security. Security teams need to understand development workflows. Both need to speak the same language.</p>
+    <p>Start small. Add a security linting step to your CI pipeline. Require dependency scanning before merges. Run OWASP Top 10 training for your dev team. These small steps create big changes over time.</p>
+    <p><strong>Security isn't a gate. It's a guardrail.</strong> DevSecOps doesn't slow development down — it keeps it on the road.</p>
+  </div>
+</div>
+<footer><div class="footer-content"><div class="footer-copy">&copy; 2026 Rana Muhammad Talha Majid</div></div></footer>
+</body></html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Websites Get Hacked (Real Cases) | Talha Majid Blog</title>
+  <meta name="description" content="Real-world website hacking cases and the lessons they teach us about web security.">
+  <link rel="icon" href="../Assets/favicon-32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+<nav class="navbar scrolled"><div class="nav-container"><a href="../index.html" class="nav-logo"><img src="../Assets/tm-logo.png" alt="TM"><span>TALHA.SEC</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../blog.html">Blog</a></div></div></nav>
+<div class="blog-full" style="padding-top:6rem">
+  <a href="../blog.html" class="blog-back"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  <img src="images/websites-hacked.png" alt="How Websites Get Hacked">
+  <div class="blog-meta"><span class="blog-category">Cybersecurity</span><span class="blog-date">January 2026</span></div>
+  <h1>How Websites Get Hacked (Real Cases)</h1>
+  <div class="blog-body">
+    <p>In 2023, a single misconfigured S3 bucket exposed 540 million Facebook records. Not through some sophisticated zero-day exploit. Not through a genius-level hack. Through a <strong>configuration checkbox that someone forgot to uncheck.</strong></p>
+    <p>Most website hacks aren't Hollywood. They're mundane, preventable, and devastatingly effective.</p>
+
+    <h2>Case 1: The SQL Injection That Cost Millions</h2>
+    <p>A mid-size e-commerce platform. Custom PHP backend. The login form didn't sanitize inputs. An attacker used a basic SQL injection to dump the entire user database: 2.3 million records including emails, hashed passwords, and billing addresses.</p>
+    <p>The fix would have taken <strong>three lines of code</strong> — prepared statements instead of string concatenation. The breach cost them $4.2 million in fines, legal fees, and lost customers.</p>
+
+    <h2>Case 2: The WordPress Plugin Backdoor</h2>
+    <p>A popular WordPress plugin with 100,000+ active installations was compromised when its developer's email was hacked. The attacker pushed an update containing a backdoor. Every site that auto-updated was now compromised. It took three weeks for anyone to notice.</p>
+    <p>Lesson: <strong>Your security is only as strong as your weakest dependency.</strong> Vet your plugins. Monitor for unexpected changes. Never trust auto-updates blindly.</p>
+
+    <h2>Case 3: The Exposed .env File</h2>
+    <p>A startup deployed their Node.js application with the <code>.env</code> file accessible via web browser. Database credentials, API keys, JWT secrets — everything needed to completely take over the application. A simple <code>curl https://example.com/.env</code> returned the keys to the kingdom.</p>
+    <p>Fix: Proper <code>.gitignore</code>, web server configuration to block dotfiles, and never — <em>never</em> — store production secrets in files accessible to the web root.</p>
+
+    <h2>Case 4: Cross-Site Scripting on a Banking Portal</h2>
+    <p>A regional bank's customer portal had an XSS vulnerability in the search function. An attacker crafted a link that, when clicked, would execute JavaScript in the context of the logged-in user's session. Session tokens stolen. Accounts accessed. Transfers initiated.</p>
+    <p>The input field accepted <code>&lt;script&gt;</code> tags. In 2024. On a banking site. Let that sink in.</p>
+
+    <h2>The Common Thread</h2>
+    <p>Every case above shares one thing: <strong>the vulnerability was basic.</strong> Not sophisticated. Not novel. Basic. SQL injection. Misconfigurations. Unvalidated inputs. Exposed secrets. These aren't advanced attacks — they're the cybersecurity equivalent of leaving your front door unlocked.</p>
+    <p>The OWASP Top 10 hasn't changed dramatically in years because we keep making the same mistakes. The tools to prevent these attacks exist. The knowledge is freely available. What's missing is the <strong>discipline to implement security consistently.</strong></p>
+    <p>Every developer should be able to identify and prevent at least the OWASP Top 10. Not eventually. Now.</p>
+  </div>
+</div>
+<footer><div class="footer-content"><div class="footer-copy">&copy; 2026 Rana Muhammad Talha Majid</div></div></footer>
+</body></html>
+
