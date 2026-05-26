@@ -492,6 +492,62 @@
           <div class="project-links">
             <a class="btn-live" href="https://drive.google.com/drive/folders/1-iXu8c_Hwk9-9nOsQpRPMkc4kaHZcjEz?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fas fa-folder-open"></i> Full Portfolio ↗</a>
           </div>
+          <!-- Animated NLE Timeline Mockup -->
+          <div class="nle-timeline">
+            <div class="nle-header">
+              <span class="nle-dot" style="background:#ef4444"></span>
+              <span class="nle-dot" style="background:#eab308"></span>
+              <span class="nle-dot" style="background:#22c55e"></span>
+              <span class="nle-title">Timeline — Project_Final_v3.prproj</span>
+              <span class="nle-timecode" id="nleTimecode">00:00:00:00</span>
+            </div>
+            <div class="nle-ruler">
+              <span>0s</span><span>5s</span><span>10s</span><span>15s</span><span>20s</span><span>25s</span><span>30s</span>
+            </div>
+            <div class="nle-tracks">
+              <div class="nle-track">
+                <div class="nle-track-label">V3</div>
+                <div class="nle-track-area">
+                  <div class="nle-clip nle-clip--title" style="left:5%;width:25%;">Title</div>
+                  <div class="nle-clip nle-clip--title" style="left:70%;width:20%;">End Card</div>
+                </div>
+              </div>
+              <div class="nle-track">
+                <div class="nle-track-label">V2</div>
+                <div class="nle-track-area">
+                  <div class="nle-clip nle-clip--overlay" style="left:8%;width:30%;">B-Roll</div>
+                  <div class="nle-clip nle-clip--overlay" style="left:50%;width:22%;">VFX</div>
+                </div>
+              </div>
+              <div class="nle-track">
+                <div class="nle-track-label">V1</div>
+                <div class="nle-track-area">
+                  <div class="nle-clip nle-clip--main" style="left:0;width:45%;">Main Footage</div>
+                  <div class="nle-clip nle-clip--main" style="left:47%;width:53%;">Interview</div>
+                </div>
+              </div>
+              <div class="nle-track">
+                <div class="nle-track-label">A1</div>
+                <div class="nle-track-area">
+                  <div class="nle-clip nle-clip--audio" style="left:0;width:95%;">
+                    <div class="nle-waveform">
+                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nle-track">
+                <div class="nle-track-label">A2</div>
+                <div class="nle-track-area">
+                  <div class="nle-clip nle-clip--music" style="left:2%;width:92%;">🎵 Background Music</div>
+                </div>
+              </div>
+              <!-- Playhead -->
+              <div class="nle-playhead" id="nlePlayhead"></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -901,6 +957,20 @@
   cells.forEach(c=>c.addEventListener('click',()=>move(+c.dataset.i)));
   rst.addEventListener('click',()=>{b.fill('');over=false;render();stat.textContent='Your turn (X)';});
   render();
+})();
+
+/* NLE Timecode */
+(function(){
+  var tc=document.getElementById('nleTimecode');
+  if(!tc)return;
+  var start=Date.now(),dur=8000;
+  function pad(n){return n<10?'0'+n:''+n;}
+  function update(){
+    var e=(Date.now()-start)%dur,s=e/1000*3.75,m=Math.floor(s/60),sec=Math.floor(s%60),f=Math.floor((s%1)*24);
+    tc.textContent='00:'+pad(m)+':'+pad(sec)+':'+pad(f);
+    requestAnimationFrame(update);
+  }
+  update();
 })();
 </script>
 <script src="js/main.js"></script>
