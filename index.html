@@ -441,6 +441,25 @@
               <span class="todo-mockup__text">Add dark mode toggle</span>
             </div>
           </div>
+          <!-- Mini Tic-Tac-Toe Game -->
+          <div class="ttt-game">
+            <div class="ttt-header">
+              <span class="ttt-label"><i class="fas fa-gamepad"></i> Quick Break — Tic Tac Toe</span>
+              <button class="ttt-reset" id="tttReset" aria-label="Reset game">↻</button>
+            </div>
+            <div class="ttt-status" id="tttStatus">Your turn (X)</div>
+            <div class="ttt-board" id="tttBoard">
+              <button class="ttt-cell" data-i="0"></button>
+              <button class="ttt-cell" data-i="1"></button>
+              <button class="ttt-cell" data-i="2"></button>
+              <button class="ttt-cell" data-i="3"></button>
+              <button class="ttt-cell" data-i="4"></button>
+              <button class="ttt-cell" data-i="5"></button>
+              <button class="ttt-cell" data-i="6"></button>
+              <button class="ttt-cell" data-i="7"></button>
+              <button class="ttt-cell" data-i="8"></button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -845,6 +864,45 @@
   </div>
 </div>
 
+<script>
+/* Mini Tic-Tac-Toe */
+(function(){
+  const b=Array(9).fill(''),cells=document.querySelectorAll('.ttt-cell'),
+    stat=document.getElementById('tttStatus'),rst=document.getElementById('tttReset');
+  if(!stat||!rst)return;
+  const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  let over=false;
+  function check(p){return wins.find(w=>w.every(i=>b[i]===p));}
+  function render(){cells.forEach((c,i)=>{c.textContent=b[i];c.className='ttt-cell'+(b[i]==='X'?' x':'')+(b[i]==='O'?' o':'');c.disabled=b[i]!==''||over;});}
+  function ai(){
+    if(over)return;
+    // try to win
+    for(let w of wins){let e=w.filter(i=>b[i]==='');let o=w.filter(i=>b[i]==='O');if(o.length===2&&e.length===1){b[e[0]]='O';return;}}
+    // block
+    for(let w of wins){let e=w.filter(i=>b[i]==='');let x=w.filter(i=>b[i]==='X');if(x.length===2&&e.length===1){b[e[0]]='O';return;}}
+    // center
+    if(b[4]===''){b[4]='O';return;}
+    // random
+    let emp=b.map((v,i)=>v===''?i:-1).filter(i=>i>=0);
+    if(emp.length)b[emp[Math.floor(Math.random()*emp.length)]]='O';
+  }
+  function move(i){
+    if(b[i]!==''||over)return;
+    b[i]='X';
+    let w=check('X');
+    if(w){over=true;render();w.forEach(i=>cells[i].classList.add('win'));stat.textContent='You win! 🎉';return;}
+    if(b.every(v=>v!=='')){over=true;render();stat.textContent="Draw!";return;}
+    ai();
+    w=check('O');
+    if(w){over=true;render();w.forEach(i=>cells[i].classList.add('win'));stat.textContent='AI wins!';return;}
+    if(b.every(v=>v!=='')){over=true;render();stat.textContent="Draw!";return;}
+    render();stat.textContent='Your turn (X)';
+  }
+  cells.forEach(c=>c.addEventListener('click',()=>move(+c.dataset.i)));
+  rst.addEventListener('click',()=>{b.fill('');over=false;render();stat.textContent='Your turn (X)';});
+  render();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

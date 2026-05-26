@@ -312,6 +312,89 @@
   box-shadow: 0 0 6px rgba(0,229,255,0.3);
 }
 
+/* ===== MINI TIC-TAC-TOE GAME ===== */
+.ttt-game {
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.ttt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+.ttt-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.ttt-label i { color: var(--accent); }
+.ttt-reset {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+  line-height: 1;
+}
+.ttt-reset:hover { border-color: var(--accent); color: var(--accent); }
+.ttt-status {
+  text-align: center;
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  color: var(--accent);
+  padding: 0.35rem;
+}
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  padding: 0.5rem 0.85rem 0.85rem;
+}
+.ttt-cell {
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+}
+.ttt-cell:hover:not(:disabled) {
+  background: rgba(0,229,255,0.06);
+  border-color: rgba(0,229,255,0.2);
+}
+.ttt-cell:disabled { cursor: default; }
+.ttt-cell.x { color: var(--accent); text-shadow: 0 0 8px rgba(0,229,255,0.4); }
+.ttt-cell.o { color: var(--accent2); text-shadow: 0 0 8px rgba(168,85,247,0.4); }
+.ttt-cell.win {
+  background: rgba(0,229,255,0.1);
+  border-color: var(--accent);
+  animation: tttPulse 0.6s ease;
+}
+@keyframes tttPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
 /* ===== MOBILE RESPONSIVE ADDITIONS ===== */
 @media(max-width:968px) {
   .contact-layout { grid-template-columns: 1fr; }
