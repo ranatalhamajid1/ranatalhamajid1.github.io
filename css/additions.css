@@ -556,6 +556,54 @@
   100% { left: calc(100% - 0.5rem); }
 }
 
+/* ===== CYBER TERMINAL MOCKUP ===== */
+.cyber-terminal {
+  margin-top: 1.25rem;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.cyber-terminal__header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+.cyber-terminal__body {
+  padding: 0.6rem 0.85rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.cyber-line {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: cyberFadeIn 0.4s ease forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@keyframes cyberFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cyber-prompt {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 0.3rem;
+}
+.cyber-output { color: rgba(255,255,255,0.4); }
+.cyber-success { color: var(--green); font-weight: 600; }
+.cyber-cursor {
+  animation: blink 0.7s infinite;
+  color: var(--accent);
+}
+
 /* ===== MOBILE RESPONSIVE ADDITIONS ===== */
 @media(max-width:968px) {
   .contact-layout { grid-template-columns: 1fr; }

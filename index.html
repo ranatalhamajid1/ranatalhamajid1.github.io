@@ -551,6 +551,48 @@
         </div>
       </div>
 
+      <!-- Cybersecurity Terminal Card -->
+      <div class="project-card reveal">
+        <div class="project-img" style="height:200px;position:relative;overflow:hidden;background:#0a0a0f;">
+          <canvas id="matrixCanvas" style="width:100%;height:100%;display:block;"></canvas>
+        </div>
+        <div class="project-body">
+          <div class="project-status live"><span class="status-dot"></span> Active</div>
+          <h3>Cybersecurity Lab</h3>
+          <p>Hands-on penetration testing, vulnerability assessment, and security research through TryHackMe rooms, CTF challenges, and real-world exploit analysis.</p>
+          <div class="project-detail">
+            <strong>🛡️ Focus:</strong> Web exploitation, privilege escalation, OWASP Top 10, network enumeration<br>
+            <strong>⚙️ Tools:</strong> Burp Suite, Nmap, Metasploit, Wireshark, Splunk, Linux
+          </div>
+          <div class="project-tags"><span>Penetration Testing</span><span>CTF</span><span>OWASP</span><span>Linux</span><span>Nmap</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a class="btn-live" href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-skull-crossbones"></i> TryHackMe ↗</a>
+          </div>
+          <!-- Animated Terminal Mockup -->
+          <div class="cyber-terminal">
+            <div class="cyber-terminal__header">
+              <span class="todo-mockup__dot" style="background:#ef4444"></span>
+              <span class="todo-mockup__dot" style="background:#eab308"></span>
+              <span class="todo-mockup__dot" style="background:#22c55e"></span>
+              <span class="todo-mockup__title">root@kali:~#</span>
+            </div>
+            <div class="cyber-terminal__body" id="cyberTermBody">
+              <div class="cyber-line" style="animation-delay:0s"><span class="cyber-prompt">$</span> nmap -sV -sC 10.10.10.1</div>
+              <div class="cyber-line cyber-output" style="animation-delay:0.8s">PORT   STATE SERVICE VERSION</div>
+              <div class="cyber-line cyber-output" style="animation-delay:1.2s">22/tcp open  ssh     OpenSSH 8.9</div>
+              <div class="cyber-line cyber-output" style="animation-delay:1.6s">80/tcp open  http    Apache 2.4.54</div>
+              <div class="cyber-line cyber-output" style="animation-delay:2s">443/tcp open ssl     nginx 1.24</div>
+              <div class="cyber-line" style="animation-delay:3s"><span class="cyber-prompt">$</span> sqlmap -u "http://target/login" --dbs</div>
+              <div class="cyber-line cyber-success" style="animation-delay:4s">[+] 3 databases found</div>
+              <div class="cyber-line" style="animation-delay:5s"><span class="cyber-prompt">$</span> hydra -l admin -P rockyou.txt ssh://10.10.10.1</div>
+              <div class="cyber-line cyber-success" style="animation-delay:6s">[+] login: admin password: ********</div>
+              <div class="cyber-line cyber-blink" style="animation-delay:7s"><span class="cyber-prompt">$</span> <span class="cyber-cursor">█</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="https://drive.google.com/drive/folders/1GoYFQqxD0Nndz5-Q0IE9YoKxYGfuoUc7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-all-btn"><i class="fas fa-images"></i> Browse Full Web Portfolio <i class="fas fa-arrow-right"></i></a>
@@ -974,6 +1016,31 @@
     requestAnimationFrame(update);
   }
   update();
+})();
+
+/* Matrix Code Rain */
+(function(){
+  var c=document.getElementById('matrixCanvas');
+  if(!c)return;
+  var ctx=c.getContext('2d');
+  function resize(){c.width=c.offsetWidth*2;c.height=c.offsetHeight*2;}
+  resize();window.addEventListener('resize',resize);
+  var cols=Math.floor(c.width/14),drops=Array(cols).fill(1);
+  var chars='01アイウエオカキクケコサシスセソタチツテトABCDEF{}[]<>/\\';
+  function draw(){
+    ctx.fillStyle='rgba(10,10,15,0.15)';
+    ctx.fillRect(0,0,c.width,c.height);
+    ctx.font='12px monospace';
+    for(var i=0;i<drops.length;i++){
+      var t=chars[Math.floor(Math.random()*chars.length)];
+      var x=i*14,y=drops[i]*14;
+      ctx.fillStyle=Math.random()>0.95?'#00e5ff':'rgba(0,229,255,'+(0.15+Math.random()*0.35)+')';
+      ctx.fillText(t,x,y);
+      if(y>c.height&&Math.random()>0.975)drops[i]=0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw,50);
 })();
 </script>
 <script src="js/main.js"></script>
