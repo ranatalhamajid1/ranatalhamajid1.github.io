@@ -3,18 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rana Muhammad Talha Majid | Cybersecurity Specialist &amp; Full Stack Developer</title>
-  <meta name="description" content="I secure systems. I build them. Portfolio of Talha Majid — Cybersecurity Specialist, Full Stack Developer, and DevSecOps Learner.">
+  <title>Rana Muhammad Talha Majid | Cybersecurity-Focused Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Talha Majid — Cybersecurity-focused Full Stack Developer specializing in secure web applications, penetration testing, and DevSecOps. BS Computer Science at UET Taxila.">
+  <meta name="keywords" content="Rana Muhammad Talha Majid, Talha Majid, Full Stack Developer Pakistan, Cybersecurity Student Pakistan, React Developer Pakistan, Cybersecurity Portfolio, DevSecOps Learner, UET Taxila">
+  <meta name="author" content="Rana Muhammad Talha Majid">
+  <link rel="canonical" href="https://talhamajid.me/">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Talha Majid — Cybersecurity-Focused Full Stack Developer">
+  <meta property="og:description" content="Building secure full-stack applications and hunting vulnerabilities. Specializing in React, PHP, MySQL, penetration testing, and DevSecOps.">
+  <meta property="og:url" content="https://talhamajid.me/">
+  <meta property="og:site_name" content="Talha Majid Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Talha Majid — Cybersecurity-Focused Full Stack Developer">
+  <meta name="twitter:description" content="Building secure full-stack applications and hunting vulnerabilities. React, PHP, MySQL, Penetration Testing, DevSecOps.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rana Muhammad Talha Majid",
+    "alternateName": "Talha Majid",
+    "url": "https://talhamajid.me",
+    "jobTitle": "Cybersecurity-Focused Full Stack Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Engineering & Technology, Taxila"
+    },
+    "knowsAbout": ["Cybersecurity", "Full Stack Development", "Penetration Testing", "DevSecOps", "React", "PHP", "MySQL"],
+    "sameAs": [
+      "https://github.com/ranatalhamajid1",
+      "https://linkedin.com/in/rana-muhammad-talha-majid-25233228b"
+    ]
+  }
+  </script>
+
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32.png">
   <link rel="apple-touch-icon" href="Assets/favicon-rounded.png">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/additions.css">
 </head>
 <body>
 
-<!-- ===== NAV (floating pill like armghan.me) ===== -->
-<nav class="navbar">
+<!-- Skip to content (Accessibility) -->
+<a href="#hero" class="skip-link">Skip to main content</a>
+
+<!-- ===== NAV (floating pill) ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-links" id="navLinks">
     <a href="#hero" class="active">Home</a>
     <a href="#about">About</a>
@@ -26,49 +75,51 @@
     <a href="#certs">Certs</a>
     <a href="#contact">Contact</a>
   </div>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme"><i class="fas fa-moon"></i></button>
+  <div class="nav-toggle" id="navToggle" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- ===== HERO (centered like armghan.me) ===== -->
-<section class="hero" id="hero">
+<!-- ===== HERO ===== -->
+<main>
+<section class="hero" id="hero" aria-label="Introduction">
   <div class="hero-center">
     <div class="hero-top">
       <!-- Profile Photo -->
       <div class="hero-photo">
-        <img src="Assets/talha.jpg" alt="Rana Muhammad Talha Majid">
+        <img src="Assets/talha.jpg" alt="Rana Muhammad Talha Majid — Cybersecurity-focused Full Stack Developer" width="250" height="250">
       </div>
 
       <!-- Hero Text -->
       <div class="hero-text">
-        <div class="greeting">Hi everyone 👋, I'm</div>
+        <div class="greeting">Hello, I'm</div>
         <h1 id="typedName"></h1>
-        <p class="subtitle">I secure systems and build them — crafting full-stack applications with security woven into every layer.</p>
+        <p class="subtitle">I build secure full-stack applications and hunt vulnerabilities — bridging the gap between development and cybersecurity.</p>
         <p class="roles"><span id="typedRole"></span><span class="typing-cursor"></span></p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-fill">Get In Touch <i class="fas fa-arrow-up-right-from-square"></i></a>
-          <a href="Assets/cvs/Resume (1).pdf" target="_blank" class="btn btn-outline">Download CV <i class="fas fa-external-link-alt"></i></a>
+          <a href="#contact" class="btn btn-fill" id="heroContactBtn">Let's Connect <i class="fas fa-arrow-right"></i></a>
+          <a href="Assets/cvs/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="heroResumeBtn">View Resume <i class="fas fa-file-alt"></i></a>
         </div>
 
         <div class="hero-socials">
           <span>Find me on:</span>
-          <a href="mailto:ranatalhamajid@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ranatalhamajid1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:ranatalhamajid@gmail.com" aria-label="Send email to Talha"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" rel="noopener noreferrer" aria-label="Talha's LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer" aria-label="Talha's GitHub profile"><i class="fab fa-github"></i></a>
         </div>
 
         <div class="hero-stats">
-          <div class="stat"><strong>15+</strong>&nbsp;Projects Built</div>
+          <div class="stat"><strong>15+</strong>&nbsp;Projects Shipped</div>
           <div class="stat">|</div>
           <div class="stat"><strong>5+</strong>&nbsp;Certifications</div>
           <div class="stat">|</div>
-          <div class="stat"><strong>3+</strong>&nbsp;Years Learning</div>
+          <div class="stat"><strong>3+</strong>&nbsp;Years in Development</div>
         </div>
       </div>
     </div>
+  </div>
 
-  <!-- Logos bar (like reference's "Worked With" strip) -->
+  <!-- Logos bar -->
   <div class="logos-bar">
     <div class="container">
       <span>Skills & Platforms:</span>
@@ -84,113 +135,313 @@
   </div>
 </section>
 
-<!-- ===== ABOUT (clean info grid like reference) ===== -->
-<section id="about">
+<!-- ===== ABOUT ===== -->
+<section id="about" aria-label="About me">
   <div class="container">
     <div class="about-header reveal">
       <div class="section-badge"><i class="fas fa-user"></i> About Me</div>
-      <h2 class="section-title">From Curious Student to<br><span class="highlight">Cybersecurity Specialist</span></h2>
-      <p class="section-desc">It started with breaking things — not maliciously, but out of curiosity. That curiosity at UET Taxila led me from building websites to questioning: "How secure is what I just built?" That question changed everything.</p>
+      <h2 class="section-title">From Curious Builder to<br><span class="highlight">Security-First Developer</span></h2>
+      <p class="section-desc">It started with building things — then questioning how easily they could break. That shift from "does it work?" to "can it be exploited?" at UET Taxila reshaped my entire approach to software engineering.</p>
     </div>
     <div class="about-grid">
-      <div class="about-item reveal"><i class="fas fa-graduation-cap"></i><div><div class="about-label">Education</div><div class="about-value">BS Computer Science — UET Taxila</div></div></div>
+      <div class="about-item reveal"><i class="fas fa-graduation-cap"></i><div><div class="about-label">Education</div><div class="about-value">BS Computer Science — UET Taxila (2023–2027)</div></div></div>
       <div class="about-item reveal"><i class="fas fa-shield-halved"></i><div><div class="about-label">Focus Area</div><div class="about-value">Cybersecurity & Penetration Testing</div></div></div>
-      <div class="about-item reveal"><i class="fas fa-code"></i><div><div class="about-label">Development</div><div class="about-value">Full Stack — HTML, CSS, JS, PHP, React</div></div></div>
-      <div class="about-item reveal"><i class="fas fa-gears"></i><div><div class="about-label">Currently Learning</div><div class="about-value">DevSecOps, CI/CD Security, Cloud Security</div></div></div>
-      <div class="about-item reveal"><i class="fas fa-bullseye"></i><div><div class="about-label">Goal</div><div class="about-value">International-level Cybersecurity Expert</div></div></div>
-      <div class="about-item reveal"><i class="fas fa-video"></i><div><div class="about-label">Creative Side</div><div class="about-value">Professional Video Editing</div></div></div>
+      <div class="about-item reveal"><i class="fas fa-code"></i><div><div class="about-label">Development</div><div class="about-value">Full Stack — React, PHP, JavaScript, MySQL</div></div></div>
+      <div class="about-item reveal"><i class="fas fa-gears"></i><div><div class="about-label">Currently Learning</div><div class="about-value">DevSecOps, CI/CD Security, Cloud Infrastructure</div></div></div>
+      <div class="about-item reveal"><i class="fas fa-bullseye"></i><div><div class="about-label">Goal</div><div class="about-value">Security Engineer at a Product Company</div></div></div>
+      <div class="about-item reveal"><i class="fas fa-book-open"></i><div><div class="about-label">Methodology</div><div class="about-value">OWASP, PTES, Secure SDLC</div></div></div>
     </div>
+
+    <!-- Leadership & Campus Involvement (compact subsection) -->
+    <div class="leadership-sub reveal" style="margin-top:3rem">
+      <div class="leadership-header">
+        <div class="section-badge" style="margin-bottom:0.75rem"><i class="fas fa-users"></i> Campus</div>
+        <h3 class="leadership-title">Leadership & <span class="highlight">Campus Involvement</span></h3>
+        <p class="leadership-desc">Alongside development and cybersecurity, I actively contribute to university communities through leadership, media production, teamwork, and student initiatives.</p>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- UET Media Club — Featured with image -->
+        <div class="campus-card campus-card--featured reveal">
+          <div class="campus-card__img">
+            <img src="Assets/umc-certificate.jpg" alt="Talha receiving Certificate of Appreciation at UET Media Club" loading="lazy">
+          </div>
+          <div class="campus-card__body">
+            <div class="campus-card__role">Operations Head & Director of Photography</div>
+            <h4 class="campus-card__title"><i class="fas fa-camera"></i> UET Media Club</h4>
+            <p class="campus-card__desc">Led media operations, coordinated event coverage, managed photography and creative production for university activities and events.</p>
+            <div class="campus-card__tags">
+              <span>Leadership</span><span>Photography</span><span>Operations</span><span>Video Editing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wall of Hope -->
+        <div class="campus-card reveal">
+          <div class="campus-card__icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <div class="campus-card__role">Finance Secretary</div>
+          <h4 class="campus-card__title">Wall of Hope — Taxila Chapter</h4>
+          <p class="campus-card__desc">Managed budgeting and coordinated fundraising activities focused on community support and welfare initiatives.</p>
+          <div class="campus-card__tags">
+            <span>Finance</span><span>Teamwork</span><span>Coordination</span>
+          </div>
+        </div>
+
+        <!-- Quaid-e-Azam Debating Society -->
+        <div class="campus-card reveal">
+          <div class="campus-card__icon"><i class="fas fa-microphone-lines"></i></div>
+          <div class="campus-card__role">Member</div>
+          <h4 class="campus-card__title">Quaid-e-Azam Debating Society</h4>
+          <p class="campus-card__desc">Participated in communication-focused activities, debates, and discussions to strengthen public speaking and critical thinking.</p>
+          <div class="campus-card__tags">
+            <span>Communication</span><span>Public Speaking</span>
+          </div>
+        </div>
+
+        <!-- CompTech Society -->
+        <div class="campus-card reveal">
+          <div class="campus-card__icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="campus-card__role">Member</div>
+          <h4 class="campus-card__title">CompTech Society</h4>
+          <p class="campus-card__desc">Participated in technology-focused collaborative activities and technical learning events.</p>
+          <div class="campus-card__tags">
+            <span>Technology</span><span>Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ===== SKILLS (card grid like reference's Research Interests) ===== -->
-<section id="skills">
+<!-- ===== SKILLS ===== -->
+<section id="skills" aria-label="Skills and technologies">
   <div class="container">
     <div class="reveal">
       <div class="section-badge"><i class="fas fa-bolt"></i> Expertise</div>
       <h2 class="section-title">Skills & <span class="highlight">Technologies</span></h2>
-      <p class="section-desc">The tools and techniques I use to secure, build, and ship digital products.</p>
+      <p class="section-desc">The tools and techniques I use to secure, build, and ship production-grade applications.</p>
     </div>
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-icon"><i class="fas fa-bug"></i></div>
         <h3>Penetration Testing</h3>
-        <p>Web application testing, network pentesting, vulnerability assessment, and exploitation using industry-standard methodologies.</p>
-        <div class="skill-tags"><span>Burp Suite</span><span>Nmap</span><span>Metasploit</span><span>OWASP</span></div>
+        <p>Web application security testing, network reconnaissance, vulnerability assessment, and exploitation following OWASP and PTES methodologies.</p>
+        <div class="skill-tags"><span>Burp Suite</span><span>Nmap</span><span>Metasploit</span><span>OWASP ZAP</span><span>Wireshark</span></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
-        <h3>Network Security</h3>
-        <p>Firewall configuration, IDS/IPS monitoring, traffic analysis, and incident response across enterprise networks.</p>
-        <div class="skill-tags"><span>Wireshark</span><span>Splunk</span><span>Suricata</span><span>tcpdump</span></div>
+        <h3>Network Security & SIEM</h3>
+        <p>Firewall configuration, IDS/IPS monitoring, traffic analysis, log correlation, and incident detection using enterprise security tools.</p>
+        <div class="skill-tags"><span>Splunk</span><span>Suricata</span><span>tcpdump</span><span>Snort</span><span>Wireshark</span></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <h3>Full Stack Development</h3>
-        <p>Building responsive, secure web applications from frontend interfaces to backend APIs and database systems.</p>
-        <div class="skill-tags"><span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>React</span></div>
+        <h3>Frontend Development</h3>
+        <p>Building responsive, accessible interfaces with modern JavaScript frameworks and CSS architecture. Performance optimization and cross-browser compatibility.</p>
+        <div class="skill-tags"><span>React</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Responsive Design</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend & Database</h3>
+        <p>Designing RESTful APIs, implementing authentication systems, building normalized database schemas, and applying server-side input validation.</p>
+        <div class="skill-tags"><span>PHP</span><span>MySQL</span><span>REST APIs</span><span>Node.js</span><span>SQL</span></div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-icon"><i class="fas fa-gears"></i></div>
-        <h3>DevSecOps</h3>
-        <p>Integrating security into development pipelines — from code scanning and container security to automated testing.</p>
-        <div class="skill-tags"><span>Docker</span><span>Git</span><span>Linux</span><span>CI/CD</span></div>
+        <h3>DevSecOps & CI/CD</h3>
+        <p>Integrating security into development pipelines — from code scanning and container security to automated testing and deployment.</p>
+        <div class="skill-tags"><span>Docker</span><span>Git</span><span>GitHub Actions</span><span>Linux</span><span>Nginx</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud & Infrastructure</h3>
+        <p>Containerizing applications, configuring web servers, managing DNS, and working with cloud platforms for deployment and hosting.</p>
+        <div class="skill-tags"><span>Google Cloud</span><span>Docker</span><span>Linux</span><span>Nginx</span><span>CI/CD</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== PROJECTS ===== -->
-<section id="projects">
+<section id="projects" aria-label="Featured projects">
   <div class="container">
     <div class="reveal">
       <div class="section-badge"><i class="fas fa-rocket"></i> Portfolio</div>
       <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
-      <p class="section-desc">Real-world applications built with security and performance in mind.</p>
+      <p class="section-desc">Real-world applications built with security-first architecture and engineering best practices.</p>
     </div>
     <div class="projects-grid">
+
+      <!-- SpectraOps -->
       <div class="project-card reveal">
         <div class="project-img">
-          <img src="Assets/Web Portfolio/SpectraOps (full stack).png" alt="SpectraOps">
-          <div class="overlay"><a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank"><i class="fab fa-github"></i> Code</a><a class="btn-live" href="https://ranatalhamajid1.github.io/spectraops-live/" target="_blank">Live ↗</a></div>
+          <img src="Assets/Web Portfolio/SpectraOps (full stack).png" alt="SpectraOps — Full-stack cybersecurity operations platform" loading="lazy">
         </div>
         <div class="project-body">
+          <div class="project-status live"><span class="status-dot"></span> Production</div>
           <h3>SpectraOps</h3>
-          <p>Full-stack cybersecurity platform with real-time threat monitoring, vulnerability scanning, and security analytics dashboard.</p>
-          <div class="project-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Security</span></div>
+          <p>Full-stack cybersecurity operations platform featuring a real-time threat monitoring dashboard, vulnerability scanning interface, and security analytics with data visualization.</p>
+          <div class="project-detail">
+            <strong>🔒 Security:</strong> Prepared statements, session-based authentication, RBAC, input sanitization, CSRF tokens<br>
+            <strong>⚙️ Architecture:</strong> PHP/MySQL backend, vanilla JS frontend with dynamic chart rendering, REST API endpoints
+          </div>
+          <div class="project-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>REST API</span><span>RBAC</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+            <a class="btn-live" href="https://ranatalhamajid1.github.io/spectraops-live/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          </div>
         </div>
       </div>
+
+      <!-- University Management System -->
       <div class="project-card reveal">
         <div class="project-img">
-          <img src="Assets/Web Portfolio/Quiz app.png" alt="CyberQuiz">
-          <div class="overlay"><a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank"><i class="fab fa-github"></i> Code</a></div>
+          <img src="Assets/Web Portfolio/UMS Improve (full stack).png" alt="University Management System — Multi-role portal with RBAC" loading="lazy">
         </div>
         <div class="project-body">
-          <h3>CyberQuiz Platform</h3>
-          <p>Interactive quiz app with timed challenges, score tracking, and cybersecurity-focused question banks.</p>
-          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal">
-        <div class="project-img">
-          <img src="Assets/Web Portfolio/UMS Improve (full stack).png" alt="UMS">
-          <div class="overlay"><a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank"><i class="fab fa-github"></i> Code</a></div>
-        </div>
-        <div class="project-body">
+          <div class="project-status live"><span class="status-dot"></span> Production</div>
           <h3>University Management System</h3>
-          <p>Full-stack UMS with role-based access control, student portals, and admin dashboards with security-first architecture.</p>
-          <div class="project-tags"><span>PHP</span><span>MySQL</span><span>RBAC</span><span>Full Stack</span></div>
+          <p>Multi-role university portal with role-based access control (Admin, Faculty, Student), course management, grade tracking, and attendance system.</p>
+          <div class="project-detail">
+            <strong>🔒 Security:</strong> RBAC with 3 permission levels, input sanitization, CSRF protection, secure session handling<br>
+            <strong>⚙️ Architecture:</strong> PHP/MySQL with normalized schema, responsive admin dashboard, form validation
+          </div>
+          <div class="project-tags"><span>PHP</span><span>MySQL</span><span>RBAC</span><span>Sessions</span><span>Full Stack</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+          </div>
         </div>
       </div>
+
+      <!-- CyberQuiz -->
       <div class="project-card reveal">
         <div class="project-img">
-          <img src="Assets/Web Portfolio/agency.png" alt="Agency Website">
-          <div class="overlay"><a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank"><i class="fab fa-github"></i> Code</a><a class="btn-live" href="https://nexagrowth.xyz" target="_blank">Live ↗</a></div>
+          <img src="Assets/Web Portfolio/Quiz app.png" alt="CyberQuiz — Interactive security awareness quiz platform" loading="lazy">
         </div>
         <div class="project-body">
-          <h3>Digital Agency Website</h3>
-          <p>Modern agency landing page with responsive design, SEO optimization, and premium aesthetic for client projects.</p>
-          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span></div>
+          <div class="project-status live"><span class="status-dot"></span> Production</div>
+          <h3>CyberQuiz Platform</h3>
+          <p>Interactive security awareness quiz platform with timed challenges, score persistence, and a curated question bank covering OWASP Top 10, network security, and cryptography.</p>
+          <div class="project-detail">
+            <strong>🎯 Problem Solved:</strong> Making cybersecurity education accessible and gamified for beginners<br>
+            <strong>⚙️ Architecture:</strong> Vanilla JS with localStorage persistence, timer logic, dynamic question rendering
+          </div>
+          <div class="project-tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>LocalStorage</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Agency Website -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="Assets/Web Portfolio/agency.png" alt="NexaGrowth — Modern responsive agency website" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div class="project-status live"><span class="status-dot"></span> Production</div>
+          <h3>NexaGrowth Agency Website</h3>
+          <p>Client-facing agency landing page built from scratch with responsive design, SEO optimization, analytics integration, and performance-tuned delivery.</p>
+          <div class="project-detail">
+            <strong>📈 Impact:</strong> Deployed to production at nexagrowth.xyz with 90+ Lighthouse performance score<br>
+            <strong>⚙️ Architecture:</strong> Semantic HTML5, CSS Grid/Flexbox, vanilla JS, DNS configuration, hosting setup
+          </div>
+          <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>SEO</span><span>Analytics</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+            <a class="btn-live" href="https://nexagrowth.xyz" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather App -->
+      <div class="project-card reveal">
+        <div class="project-img" style="height:200px;background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(168,85,247,0.08));display:flex;align-items:center;justify-content:center;font-size:3rem;">
+          🌦️
+        </div>
+        <div class="project-body">
+          <div class="project-status dev"><span class="status-dot"></span> In Development</div>
+          <h3>Weather Dashboard</h3>
+          <p>Real-time weather application consuming external REST APIs with geolocation, 5-day forecast rendering, and responsive data visualization.</p>
+          <div class="project-detail">
+            <strong>🔌 APIs:</strong> OpenWeatherMap REST API integration with error handling and rate limiting<br>
+            <strong>⚙️ Architecture:</strong> Async JavaScript, fetch API, JSON parsing, dynamic DOM updates
+          </div>
+          <div class="project-tags"><span>JavaScript</span><span>REST API</span><span>Async/Await</span><span>CSS3</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Manager -->
+      <div class="project-card reveal">
+        <div class="project-img" style="height:200px;background:linear-gradient(135deg,rgba(168,85,247,0.08),rgba(0,229,255,0.08));display:flex;align-items:center;justify-content:center;font-size:3rem;">
+          ✅
+        </div>
+        <div class="project-body">
+          <div class="project-status dev"><span class="status-dot"></span> In Development</div>
+          <h3>Task Manager App</h3>
+          <p>Full-featured task management application with CRUD operations, priority levels, due date tracking, and persistent data storage.</p>
+          <div class="project-detail">
+            <strong>🎯 Problem Solved:</strong> Organizing development workflows with filterable, prioritized task lists<br>
+            <strong>⚙️ Architecture:</strong> JavaScript with localStorage, DOM manipulation, event delegation, responsive UI
+          </div>
+          <div class="project-tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>LocalStorage</span><span>CRUD</span></div>
+          <div class="project-links">
+            <a class="btn-gh" href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" aria-label="Professional experience">
+  <div class="container">
+    <div class="section-center-header reveal">
+      <h2 class="section-title-center">Experience</h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="armghan-timeline-wrap reveal">
+      <div class="armghan-tl-item">
+        <div class="armghan-tl-dot"></div>
+        <div class="armghan-tl-date">2025 -<br>2026</div>
+        <div class="armghan-tl-content">
+          <h3>AI Video Editor & Creative Media Specialist</h3>
+          <div class="armghan-tl-org"><a href="https://streamedgedigital.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);transition:opacity 0.3s">StreamEdge Digital</a> · <a href="https://www.linkedin.com/company/professionalcrew/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);transition:opacity 0.3s">Professional Crew</a></div>
+          <p>Produced AI-enhanced video content and creative media for digital campaigns and branded projects. Leveraged generative AI tools — Runway ML, ElevenLabs, Google AI Studio, Grok Imagine, and ByteDance AI — alongside Adobe Premiere Pro, After Effects, and CapCut to create cinematic edits, AI-assisted visuals, and motion graphics. Designed thumbnails and marketing assets in Canva, optimized short-form content for social platforms, and built automation-enhanced editing pipelines to accelerate production workflows.</p>
+          <div class="skill-tags" style="margin-top:0.75rem"><span>AI Editing</span><span>Generative AI</span><span>Motion Graphics</span><span>Content Production</span><span>Premiere Pro</span></div>
+        </div>
+      </div>
+      <div class="armghan-tl-item">
+        <div class="armghan-tl-dot"></div>
+        <div class="armghan-tl-date">2024 -<br>Present</div>
+        <div class="armghan-tl-content">
+          <h3>Founder & Lead Developer</h3>
+          <div class="armghan-tl-org">NexaGrowth — Digital Agency</div>
+          <p>Built and deployed the agency website (nexagrowth.xyz) from scratch using semantic HTML, CSS Grid, and vanilla JavaScript. Implemented SEO optimization achieving 90+ Lighthouse scores. Managed DNS configuration, hosting setup, and SSL certificates. Developed responsive landing pages for clients with analytics integration and performance monitoring.</p>
+        </div>
+      </div>
+      <div class="armghan-tl-item">
+        <div class="armghan-tl-dot"></div>
+        <div class="armghan-tl-date">2024</div>
+        <div class="armghan-tl-content">
+          <h3>Web Development & Operations Intern</h3>
+          <div class="armghan-tl-org">Capxa</div>
+          <p>Contributed to frontend development tasks including responsive UI implementation and cross-browser compatibility testing. Assisted in website performance optimization, production deployment workflows, and debugging layout issues across devices. Gained hands-on experience with professional development workflows and version control practices.</p>
+        </div>
+      </div>
+      <div class="armghan-tl-item">
+        <div class="armghan-tl-dot"></div>
+        <div class="armghan-tl-date">2023 -<br>Present</div>
+        <div class="armghan-tl-content">
+          <h3>Freelance Full Stack Developer</h3>
+          <div class="armghan-tl-org">Independent — Remote</div>
+          <p>Delivered 15+ client websites spanning e-commerce stores, portfolios, and business landing pages. Handled full project lifecycle: requirements gathering, UI/UX implementation, backend API development with PHP/MySQL, database schema design, deployment configuration, and post-launch maintenance. Implemented form validation, responsive layouts, and SEO best practices across all projects.</p>
         </div>
       </div>
     </div>
@@ -198,36 +449,123 @@
 </section>
 
 <!-- ===== CYBER TOOLS ===== -->
-<section id="tools">
+<section id="tools" aria-label="Interactive cybersecurity tools">
   <div class="container">
     <div class="reveal">
       <div class="section-badge"><i class="fas fa-terminal"></i> Interactive</div>
       <h2 class="section-title">Cyber <span class="highlight">Tools</span></h2>
-      <p class="section-desc">Try these security tools right here in your browser.</p>
+      <p class="section-desc">Try these security tools right here in your browser — built to demonstrate security concepts.</p>
     </div>
     <div class="tools-grid">
+
+      <!-- Email Breach Checker -->
       <div class="tool-card reveal">
         <h3><i class="fas fa-envelope-open-text"></i> Email Breach Checker</h3>
-        <p>Check if your email has appeared in known data breaches.</p>
+        <p>Simulates checking if an email has appeared in known data breaches. Demonstrates how breach databases work.</p>
         <div class="tool-input-group">
-          <input type="email" class="tool-input" id="emailInput" placeholder="Enter email address">
-          <button class="tool-btn" id="emailCheckBtn">Scan</button>
+          <input type="email" class="tool-input" id="emailInput" placeholder="Enter email address" aria-label="Email address to check">
+          <button class="tool-btn" id="emailCheckBtn" aria-label="Scan email for breaches">Scan</button>
         </div>
         <div class="tool-result" id="emailResult"><span style="color:var(--text-muted)">Results will appear here...</span></div>
+        <div class="tool-disclaimer"><i class="fas fa-info-circle"></i> Educational simulation — does not query real breach databases. Use haveibeenpwned.com for actual checks.</div>
       </div>
+
+      <!-- Password Strength Checker -->
       <div class="tool-card reveal">
-        <h3><i class="fas fa-key"></i> Password Strength Checker</h3>
-        <p>Analyze your password's strength and estimated crack time.</p>
-        <input type="text" class="tool-input" id="passwordInput" placeholder="Enter a password to test" style="margin-bottom:1rem;width:100%">
-        <div class="strength-meter"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
-        <div class="tool-result" id="passwordResult"><span style="color:var(--text-muted)">Enter a password to check...</span></div>
+        <h3><i class="fas fa-key"></i> Password Strength Analyzer</h3>
+        <p>Analyzes password entropy, character diversity, and estimated brute-force crack time.</p>
+        <input type="text" class="tool-input" id="passwordInput" placeholder="Enter a password to test" style="margin-bottom:1rem;width:100%" aria-label="Password to analyze" autocomplete="off">
+        <div class="strength-meter" role="meter" aria-label="Password strength meter"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+        <div class="tool-result" id="passwordResult"><span style="color:var(--text-muted)">Enter a password to analyze...</span></div>
+        <div class="tool-disclaimer"><i class="fas fa-lock"></i> Your password is never stored or transmitted. All analysis happens locally in your browser.</div>
       </div>
+
+      <!-- HTTP Header Scanner -->
+      <div class="tool-card reveal">
+        <h3><i class="fas fa-globe-lock"></i> HTTP Header Security Check</h3>
+        <p>Demonstrates which security headers a well-configured website should have to prevent common attacks.</p>
+        <div class="tool-input-group">
+          <input type="url" class="tool-input" id="headerInput" placeholder="Enter a domain (e.g., google.com)" aria-label="Domain to scan">
+          <button class="tool-btn" id="headerCheckBtn" aria-label="Scan security headers">Analyze</button>
+        </div>
+        <div class="tool-result" id="headerResult"><span style="color:var(--text-muted)">Results will appear here...</span></div>
+        <div class="tool-disclaimer"><i class="fas fa-info-circle"></i> Educational demonstration — shows ideal security header configuration for any domain.</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== CERTIFICATIONS (armghan.me style) ===== -->
-<section id="certs">
+<!-- ===== RESULTS (Engineering Metrics) ===== -->
+<section id="results" aria-label="Engineering metrics and achievements">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-badge"><i class="fas fa-chart-line"></i> Impact</div>
+      <h2 class="section-title">Engineering <span class="highlight">Metrics</span></h2>
+      <p class="section-desc">Numbers behind the work — measurable engineering output and continuous learning.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal"><div class="result-number" data-target="15" data-suffix="+">0</div><div class="result-label">Projects Shipped</div><div class="result-desc">Full-stack applications delivered to production for clients and personal use</div></div>
+      <div class="result-card reveal"><div class="result-number" data-target="200" data-suffix="+">0</div><div class="result-label">TryHackMe Rooms</div><div class="result-desc">Hands-on cybersecurity labs completed — web exploitation, privilege escalation, CTFs</div></div>
+      <div class="result-card reveal"><div class="result-number" data-target="5" data-suffix="+">0</div><div class="result-label">Certifications Earned</div><div class="result-desc">Industry certifications from Google, IBM, CompTIA track, and TryHackMe</div></div>
+      <div class="result-card reveal"><div class="result-number" data-target="10" data-suffix="+">0</div><div class="result-label">APIs Integrated</div><div class="result-desc">Third-party REST APIs consumed and integrated across various projects</div></div>
+      <div class="result-card reveal"><div class="result-number" data-target="3" data-suffix="+">0</div><div class="result-label">Years in Development</div><div class="result-desc">Continuous learning journey from HTML basics to full-stack security engineering</div></div>
+      <div class="result-card reveal"><div class="result-number" data-target="8" data-suffix="+">0</div><div class="result-label">Blog Articles</div><div class="result-desc">Technical articles on cybersecurity, DevSecOps, and secure development practices</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG PREVIEW ===== -->
+<section id="blog-preview" aria-label="Latest blog articles">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-badge"><i class="fas fa-pen-nib"></i> Insights</div>
+      <h2 class="section-title">Latest <span class="highlight">Articles</span></h2>
+      <p class="section-desc">Thoughts on cybersecurity, secure development, and the DevSecOps journey.</p>
+    </div>
+    <div class="blog-preview-grid">
+      <a href="blog/how-hackers-think.html" class="blog-preview-card reveal">
+        <div class="bp-icon">🧠</div>
+        <div class="bp-body">
+          <div class="bp-meta">
+            <span class="bp-cat">Cybersecurity</span>
+            <span class="bp-time"><i class="fas fa-clock"></i> 5 min read</span>
+          </div>
+          <h3>How Hackers Actually Think</h3>
+          <p class="bp-desc">It's not about the hoodie. Hackers see systems the way architects see buildings — they look for structural weaknesses.</p>
+        </div>
+      </a>
+      <a href="blog/why-devs-ignore-security.html" class="blog-preview-card reveal">
+        <div class="bp-icon">🔓</div>
+        <div class="bp-body">
+          <div class="bp-meta">
+            <span class="bp-cat">DevOps</span>
+            <span class="bp-time"><i class="fas fa-clock"></i> 6 min read</span>
+          </div>
+          <h3>Why Developers Ignore Security</h3>
+          <p class="bp-desc">It's not laziness. It's a system problem. And it's costing companies millions every year.</p>
+        </div>
+      </a>
+      <a href="blog/devsecops-simplified.html" class="blog-preview-card reveal">
+        <div class="bp-icon">⚙️</div>
+        <div class="bp-body">
+          <div class="bp-meta">
+            <span class="bp-cat">DevSecOps</span>
+            <span class="bp-time"><i class="fas fa-clock"></i> 5 min read</span>
+          </div>
+          <h3>DevSecOps Simplified</h3>
+          <p class="bp-desc">Security shouldn't be an afterthought. Here's how to bake it into every stage of your CI/CD pipeline.</p>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center">
+      <a href="blog.html" class="view-all-btn">View All Articles <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certs" aria-label="Certifications and education">
   <div class="container">
     <div class="section-center-header reveal">
       <h2 class="section-title-center">Certifications</h2>
@@ -238,36 +576,39 @@
         <div class="armghan-tl-dot"></div>
         <div class="armghan-tl-date">2024 -<br>Present</div>
         <div class="armghan-tl-content">
-          <h3>PenTest+ Program</h3>
-          <div class="armghan-tl-org">CompTIA Track</div>
-          <p>Advanced penetration testing methodologies, vulnerability management, and professional reporting.</p>
+          <h3>CompTIA PenTest+ Track <span class="cert-issuer"><i class="fas fa-award"></i> CompTIA</span></h3>
+          <div class="armghan-tl-org">CompTIA Certification Track</div>
+          <p>Advanced penetration testing methodologies including planning and scoping, information gathering, vulnerability identification, exploitation, post-exploitation, and professional reporting. Currently preparing for certification exam.</p>
         </div>
       </div>
       <div class="armghan-tl-item">
         <div class="armghan-tl-dot"></div>
         <div class="armghan-tl-date">2024</div>
         <div class="armghan-tl-content">
-          <h3>Google Cybersecurity Professional Certificate</h3>
+          <h3>Google Cybersecurity Professional Certificate <span class="cert-issuer"><i class="fab fa-google"></i> Google</span></h3>
           <div class="armghan-tl-org">Google / Coursera</div>
-          <p>Security frameworks, SIEM tools, incident response, Python for automation, and Linux fundamentals.</p>
+          <p>8-course specialization covering security frameworks (NIST CSF), SIEM tools (Splunk, Chronicle), incident response playbooks, Python automation for security tasks, Linux command-line operations, and network security fundamentals.</p>
+          <a href="#" class="cert-link"><i class="fas fa-external-link-alt"></i> Verify on Coursera</a>
         </div>
       </div>
       <div class="armghan-tl-item">
         <div class="armghan-tl-dot"></div>
         <div class="armghan-tl-date">2024</div>
         <div class="armghan-tl-content">
-          <h3>IBM Full Stack Software Developer</h3>
+          <h3>IBM Full Stack Software Developer <span class="cert-issuer"><i class="fas fa-building"></i> IBM</span></h3>
           <div class="armghan-tl-org">IBM / Coursera</div>
-          <p>Cloud-native development, React, Node.js, microservices, containers, and DevOps practices.</p>
+          <p>Cloud-native full stack development covering React, Node.js, Express, microservices architecture, containerization with Docker, Kubernetes orchestration, and CI/CD pipeline implementation with DevOps practices.</p>
+          <a href="#" class="cert-link"><i class="fas fa-external-link-alt"></i> Verify on Coursera</a>
         </div>
       </div>
       <div class="armghan-tl-item">
         <div class="armghan-tl-dot"></div>
         <div class="armghan-tl-date">2023 -<br>2024</div>
         <div class="armghan-tl-content">
-          <h3>TryHackMe — Top Learner</h3>
+          <h3>TryHackMe — Top Learner <span class="cert-issuer"><i class="fas fa-skull-crossbones"></i> THM</span></h3>
           <div class="armghan-tl-org">TryHackMe Platform</div>
-          <p>200+ rooms completed. Web exploitation, privilege escalation, CTFs, OWASP Top 10.</p>
+          <p>200+ rooms completed covering web exploitation (XSS, SQLi, SSRF), privilege escalation (Linux & Windows), CTF challenges, OWASP Top 10 vulnerabilities, network enumeration, and Active Directory attacks.</p>
+          <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="cert-link"><i class="fas fa-external-link-alt"></i> View TryHackMe Profile</a>
         </div>
       </div>
       <div class="armghan-tl-item">
@@ -275,123 +616,92 @@
         <div class="armghan-tl-date">2023 -<br>2027</div>
         <div class="armghan-tl-content">
           <h3>BS Computer Science</h3>
-          <div class="armghan-tl-org">UET Taxila</div>
-          <p>Core CS fundamentals with focus on networks, OS, algorithms, and security coursework.</p>
+          <div class="armghan-tl-org">UET Taxila — University of Engineering & Technology</div>
+          <p>Core CS fundamentals including data structures & algorithms, operating systems, computer networks, database systems, software engineering, and cybersecurity coursework. Active in technical societies and CTF competitions.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== EXPERIENCE (armghan.me style) ===== -->
-<section id="experience">
-  <div class="container">
-    <div class="section-center-header reveal">
-      <h2 class="section-title-center">Experience</h2>
-      <div class="title-underline"></div>
-    </div>
-    <div class="armghan-timeline-wrap reveal">
-      <div class="armghan-tl-item">
-        <div class="armghan-tl-dot"></div>
-        <div class="armghan-tl-date">2024 -<br>Present</div>
-        <div class="armghan-tl-content">
-          <h3>Founder & Digital Strategist</h3>
-          <div class="armghan-tl-org">NexaGrowth — Digital Marketing Agency</div>
-          <p>Founded and operate a digital marketing agency specializing in Shopify store optimization, Facebook & TikTok advertising, and growth strategy for e-commerce brands. Achieved 2.5× ROAS across multiple client campaigns.</p>
-        </div>
-      </div>
-      <div class="armghan-tl-item">
-        <div class="armghan-tl-dot"></div>
-        <div class="armghan-tl-date">2024</div>
-        <div class="armghan-tl-content">
-          <h3>Intern — Digital Marketing & Operations</h3>
-          <div class="armghan-tl-org">Capxa</div>
-          <p>Gained hands-on experience in digital operations, customer communication, and marketing workflows within a professional agency environment.</p>
-        </div>
-      </div>
-      <div class="armghan-tl-item">
-        <div class="armghan-tl-dot"></div>
-        <div class="armghan-tl-date">2023 -<br>Present</div>
-        <div class="armghan-tl-content">
-          <h3>Freelance Developer & Video Editor</h3>
-          <div class="armghan-tl-org">Independent Freelance Work</div>
-          <p>Delivered full-stack web development projects and professional video editing services to international clients. Built 15+ websites and produced 50+ video projects.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== RESULTS ===== -->
-<section id="results">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-badge"><i class="fas fa-chart-line"></i> Impact</div>
-      <h2 class="section-title">Results That <span class="highlight">Speak</span></h2>
-      <p class="section-desc">Numbers behind the work — because results are what matter.</p>
-    </div>
-    <div class="results-grid">
-      <div class="result-card reveal"><div class="result-number" data-target="2.5" data-suffix="×">0</div><div class="result-label">ROAS Achieved</div><div class="result-desc">Return on Ad Spend across Facebook & TikTok campaigns</div></div>
-      <div class="result-card reveal"><div class="result-number" data-target="35" data-suffix="%">0</div><div class="result-label">CPA Reduction</div><div class="result-desc">Reduction in cost-per-acquisition through ad optimization</div></div>
-      <div class="result-card reveal"><div class="result-number" data-target="40" data-suffix="%">0</div><div class="result-label">Conversion Boost</div><div class="result-desc">Increase in store conversion rate through UX & funnel optimization</div></div>
-      <div class="result-card reveal"><div class="result-number" data-target="35" data-suffix="%">0</div><div class="result-label">Engagement Boost</div><div class="result-desc">Increase in content engagement through strategic video production</div></div>
-      <div class="result-card reveal"><div class="result-number" data-target="50" data-suffix="+">0</div><div class="result-label">Videos Edited</div><div class="result-desc">Professional video projects delivered for clients and brands</div></div>
-      <div class="result-card reveal"><div class="result-number" data-target="10" data-suffix="+">0</div><div class="result-label">Ad Campaigns</div><div class="result-desc">Successful campaigns run across Meta and TikTok platforms</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT (armghan.me style) ===== -->
-<section id="contact">
+<!-- ===== CONTACT ===== -->
+<section id="contact" aria-label="Contact information and form">
   <div class="container">
     <div class="contact-header-center reveal">
       <div class="section-badge"><i class="fas fa-paper-plane"></i> Let's Connect</div>
       <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
-      <p class="section-desc">Ready to build something great? Let's talk about your project, opportunity, or idea.</p>
+      <p class="section-desc">Looking for a security-conscious developer? Let's talk about your next project, internship opportunity, or collaboration.</p>
     </div>
     <div class="contact-layout">
       <div class="contact-left reveal">
-        <h3>Let's Work Together</h3>
-        <p>Whether you need a developer, a cybersecurity expert, or a video editor — I'm available for freelance projects, internships, and full-time opportunities.</p>
+        <div class="availability-badge"><span class="pulse"></span> Available for Internships & Projects</div>
+        <h3>Let's Build Something Secure</h3>
+        <p>Whether you need a full-stack developer who thinks about security from day one, or a cybersecurity student eager to contribute to real-world projects — I'm ready.</p>
         <div class="contact-items">
-          <a href="mailto:ranatalhamajid@gmail.com" class="contact-item"><i class="fas fa-envelope"></i><div><div class="ci-label">Email</div><div class="ci-value">ranatalhamajid@gmail.com</div></div></a>
-          <a href="tel:03068888847" class="contact-item"><i class="fas fa-phone"></i><div><div class="ci-label">Phone</div><div class="ci-value">0306-8888847</div></div></a>
-          <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" class="contact-item"><i class="fab fa-linkedin-in"></i><div><div class="ci-label">LinkedIn</div><div class="ci-value">Connect with me</div></div></a>
-          <a href="https://github.com/ranatalhamajid1" target="_blank" class="contact-item"><i class="fab fa-github"></i><div><div class="ci-label">GitHub</div><div class="ci-value">View my code</div></div></a>
-          <a href="https://drive.google.com/drive/folders/1QiHfsQXcBhuoTmY8-36GREO7RCPUklFQ" target="_blank" class="contact-item"><i class="fas fa-globe"></i><div><div class="ci-label">Web Portfolio</div><div class="ci-value">View my websites</div></div></a>
-          <a href="https://drive.google.com/drive/folders/1-iXu8c_Hwk9-9nOsQpRPMkc4kaHZcjEz" target="_blank" class="contact-item"><i class="fas fa-video"></i><div><div class="ci-label">Video Editing Portfolio</div><div class="ci-value">View my videos</div></div></a>
+          <a href="mailto:ranatalhamajid@gmail.com" class="contact-item" id="contactEmail"><i class="fas fa-envelope"></i><div><div class="ci-label">Email</div><div class="ci-value">ranatalhamajid@gmail.com</div></div></a>
+          <a href="tel:+923068888847" class="contact-item" id="contactPhone"><i class="fas fa-phone"></i><div><div class="ci-label">Phone</div><div class="ci-value">+92 306-8888847</div></div></a>
+          <a href="https://wa.me/923068888847" target="_blank" rel="noopener noreferrer" class="contact-item" id="contactWhatsApp"><i class="fab fa-whatsapp"></i><div><div class="ci-label">WhatsApp</div><div class="ci-value">Message me directly</div></div></a>
+          <a href="https://linkedin.com/in/rana-muhammad-talha-majid-25233228b" target="_blank" rel="noopener noreferrer" class="contact-item" id="contactLinkedIn"><i class="fab fa-linkedin-in"></i><div><div class="ci-label">LinkedIn</div><div class="ci-value">Connect with me</div></div></a>
+          <a href="https://github.com/ranatalhamajid1" target="_blank" rel="noopener noreferrer" class="contact-item" id="contactGitHub"><i class="fab fa-github"></i><div><div class="ci-label">GitHub</div><div class="ci-value">View my repositories</div></div></a>
         </div>
         <div class="resume-section">
           <h4>Download Resume</h4>
           <div class="resume-btns">
-            <a href="Assets/cvs/Rana_Talha_WebDev_Resume.pdf" target="_blank">Web Dev</a>
-            <a href="Assets/cvs/Rana_Talha_Resume_Cyber.pdf" target="_blank">Cybersecurity</a>
-            <a href="Assets/cvs/Rana_Talha_Ecommerce_Resume.pdf" target="_blank">E-Commerce</a>
-            <a href="Assets/cvs/Rana_Talha_VideoEditor_Resume.pdf" target="_blank">Video Editing</a>
+            <a href="Assets/cvs/Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </div>
         </div>
+        <div class="response-time"><i class="fas fa-clock"></i> Typical response time: under 24 hours</div>
       </div>
       <div class="contact-right reveal">
-        <form class="contact-form" id="contactForm">
-          <div><label>Your Name</label><input type="text" name="name" placeholder="John Smith" required></div>
-          <div><label>Your Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
-          <div class="full-width"><label>Service Needed</label><select name="service"><option value="">Select a service...</option><option>Web Development</option><option>Cybersecurity</option><option>Shopify Setup</option><option>Facebook Ads</option><option>Video Editing</option><option>Other</option></select></div>
-          <div class="full-width"><label>Message</label><textarea name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea></div>
-          <button type="submit" class="btn btn-fill full-width"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <form class="contact-form" id="contactForm" novalidate>
+          <!-- Honeypot field (hidden from humans, bots fill it) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" name="name" id="contactName" placeholder="John Smith" required minlength="2" maxlength="100">
+            <span class="error-msg">Please enter your name (at least 2 characters)</span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmailInput">Your Email</label>
+            <input type="email" name="email" id="contactEmailInput" placeholder="john@example.com" required>
+            <span class="error-msg">Please enter a valid email address</span>
+          </div>
+          <div class="full-width form-group">
+            <label for="contactService">How Can I Help?</label>
+            <select name="service" id="contactService">
+              <option value="">Select a service...</option>
+              <option>Full Stack Development</option>
+              <option>Security Audit / Consulting</option>
+              <option>Frontend Development</option>
+              <option>Backend / API Development</option>
+              <option>DevSecOps Integration</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="full-width form-group">
+            <label for="contactMessage">Message</label>
+            <textarea name="message" id="contactMessage" rows="5" placeholder="Tell me about your project or opportunity..." required minlength="10" maxlength="2000"></textarea>
+            <span class="error-msg">Please enter a message (at least 10 characters)</span>
+          </div>
+          <button type="submit" class="btn btn-fill full-width" id="contactSubmitBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
           <div class="form-status" id="formStatus"></div>
         </form>
       </div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- ===== FOOTER (armghan.me multi-column style) ===== -->
-<footer class="new-footer">
+<!-- ===== FOOTER ===== -->
+<footer class="new-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="fb-name">Talha.</div>
-      <div class="fb-desc">Cybersecurity Enthusiast | Full Stack Developer | E-Commerce Strategist | Video Editor</div>
-      <div class="fb-loc">📍 Pakistan</div>
+      <div class="fb-desc">Cybersecurity-Focused Full Stack Developer — building secure applications and hunting vulnerabilities.</div>
+      <div class="fb-loc">📍 Pakistan · BS CS @ UET Taxila</div>
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
@@ -402,29 +712,26 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <a href="#">Web Development</a>
-      <a href="#">Shopify Setup</a>
-      <a href="#">Facebook Ads</a>
-      <a href="#">Cybersecurity</a>
-      <a href="#">Video Editing</a>
+      <h4>Expertise</h4>
+      <a href="#skills">Full Stack Development</a>
+      <a href="#skills">Penetration Testing</a>
+      <a href="#skills">DevSecOps</a>
+      <a href="#skills">API Development</a>
+      <a href="#tools">Security Tools</a>
     </div>
     <div class="footer-col">
-      <h4>Resumes</h4>
-      <a href="Assets/cvs/Rana_Talha_General_Resume.pdf" target="_blank">General Resume</a>
-      <a href="Assets/cvs/Rana_Talha_WebDev_Resume.pdf" target="_blank">Web Dev Resume</a>
-      <a href="Assets/cvs/Rana_Talha_Resume_Cyber.pdf" target="_blank">Cyber Resume</a>
-      <a href="Assets/cvs/Rana_Talha_Ecommerce_Resume.pdf" target="_blank">E-Commerce Resume</a>
+      <h4>Resume</h4>
+      <a href="Assets/cvs/Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="fb-copy">&copy; 2026 Rana Muhammad Talha Majid. All rights reserved.</div>
-    <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll back to top"><i class="fas fa-arrow-up"></i></button>
   </div>
 </footer>
 
-<!-- Rocket Scroll Widget (SpaceX-style like armghan.me) -->
-<div class="rocket-widget" id="rocketWidget">
+<!-- Rocket Scroll Widget (SpaceX-style) -->
+<div class="rocket-widget" id="rocketWidget" aria-hidden="true">
   <div class="rocket-label-wrap">
     <span class="rocket-label" id="rocketLabel">Liftoff</span>
   </div>
@@ -442,18 +749,18 @@
 </div>
 
 <!-- Rocket Chat -->
-<div class="rocket-chat" id="rocketChat">
+<div class="rocket-chat" id="rocketChat" role="dialog" aria-label="Chat assistant">
   <div class="rc-header">
     <span class="rc-title">Rocket Chat</span>
     <span class="rc-subtitle">Ask me about Talha</span>
-    <button class="rc-close" id="rocketClose">&times;</button>
+    <button class="rc-close" id="rocketClose" aria-label="Close chat">&times;</button>
   </div>
   <div class="rc-body" id="rcBody">
-    <div class="rc-msg bot">Hey! I'm Talha's rocket copilot. Ask me about his skills, projects, experience, or services.</div>
+    <div class="rc-msg bot">Hey! I'm Talha's portfolio assistant. Ask me about his skills, projects, certifications, or cybersecurity experience.</div>
   </div>
   <div class="rc-input">
-    <input type="text" id="rcInput" placeholder="Ask about skills, projects, or services...">
-    <button class="rc-send" id="rcSend">Send</button>
+    <input type="text" id="rcInput" placeholder="Ask about skills, projects, or certifications..." aria-label="Type your question">
+    <button class="rc-send" id="rcSend" aria-label="Send message">Send</button>
   </div>
 </div>
 

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://talhamajid.me/sitemap.xml
+
+# Portfolio of Rana Muhammad Talha Majid
+# Cybersecurity-Focused Full Stack Developer

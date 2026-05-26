@@ -240,14 +240,31 @@
   .armghan-tl-item { grid-template-columns: 100px 1fr; gap: 1.5rem; }
   .armghan-tl-dot { left: 112px; }
   .armghan-tl-date { font-size: 1.2rem; }
+  .results-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
 @media(max-width:640px) {
   .footer-grid { grid-template-columns: 1fr; }
-  .results-grid { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr 1fr; }
   .contact-form { grid-template-columns: 1fr; }
   .resume-btns { flex-direction: column; }
   .resume-btns a { text-align: center; }
   .armghan-tl-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .armghan-tl-dot { display: none; }
   .armghan-timeline-wrap { padding: 1.5rem 1rem; }
+  .contact-items { gap: 0.5rem; }
+  .contact-item { padding: 0.75rem 1rem; }
+  .contact-item i { width: 36px; height: 36px; font-size: 0.95rem; }
+  .footer-bottom { padding-right: 0; justify-content: center; text-align: center; }
+}
+@media(max-width:375px) {
+  .armghan-timeline-wrap { padding: 1rem 0.75rem; }
+  .armghan-tl-item { padding: 1.5rem 0; }
+  .armghan-tl-content h3 { font-size: 1rem; }
+  .armghan-tl-content p { font-size: 0.82rem; }
+  .result-card { padding: 1.5rem 1rem; }
+  .result-number { font-size: 2rem; }
+  .contact-left h3 { font-size: 1.15rem; }
+  .footer-brand .fb-desc { font-size: 0.78rem; }
+  .footer-col a { font-size: 0.82rem; }
+  .results-grid { grid-template-columns: 1fr; }
 }
